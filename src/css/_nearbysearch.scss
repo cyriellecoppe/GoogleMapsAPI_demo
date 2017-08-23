@@ -1,0 +1,70 @@
+#nearby-place__container {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+#nearby-place__row {
+    background-color: map-get($colors, z-ghostwhite);
+    & .is-focused {
+        box-shadow: 0px 0px 10px 4px map-get($colors, z-dark-blue);
+    }
+    & .nearby-place__slider {
+        flex-wrap: nowrap;
+    }
+}
+
+#nearby-place__toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: map-get($colors, z-ghostwhite);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    & .fa {
+        margin-left: 5px;
+    }
+}
+
+.nearby-place__card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &:hover, &:active, &:focus {
+        box-shadow: 0px 0px 10px map-get($colors, z-dark-gray);
+    }
+    & img {
+        max-height: 150px;
+    }
+    & .card-img__none {
+        height: 150px;
+    }
+    & .card-block {
+        & #card-text__address {
+            font-size: 12px;
+            font-style: italic;
+        }
+        & #card-text__opening-hours {
+            font-size: 12px;
+            & .fa {
+                margin-left: 5px;
+            }
+            & .fa-check {
+                color: map-get($colors, z-green);
+            }
+            & .fa-times {
+                color: map-get($colors, z-darkred);
+            }
+        }
+    }
+    & .card-footer {
+        font-size: 12px;
+        & .badge__score--star {
+            margin-left: 10px;
+            & .fa {
+                color: map-get($colors, z-yellow);
+            }
+        }
+    }
+}

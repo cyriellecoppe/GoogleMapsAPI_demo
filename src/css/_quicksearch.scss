@@ -1,0 +1,35 @@
+#quick-search__carousel {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+
+.quick-search__button {
+    margin: 5px;
+    color: map-get($colors, z-white);
+    text-transform: capitalize;
+    &:hover {
+        box-shadow: 0px 0px 5px 3px map-get($colors, z-blue);
+    }
+    &:focus {
+        box-shadow: 0px 0px 5px 3px map-get($colors, z-orange);
+    }
+}
+
+#quick-search__placeholder {
+    height: 48px;
+}
+
+$colors-place-types: (
+    turquoise: map-get($colors, z-turquoise),
+    light-blue: map-get($colors, z-light-blue),
+    medium-blue: map-get($colors, z-medium-blue),
+    blue: map-get($colors, z-blue),
+    dark-blue: map-get($colors, z-dark-blue),
+    dark-gray: map-get($colors, z-dark-gray),
+);
+
+@each $type, $type-color in $colors-place-types {
+    .quick-search__color--#{$type} {
+        background-color: $type-color;
+    }
+}

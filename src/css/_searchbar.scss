@@ -1,0 +1,26 @@
+#search-bar__form {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    justify-content: center;
+    & .form-control:focus {
+        border-color: map-get($colors, z-light-gray);
+    }
+}
+
+#search-bar {
+    & input {
+        border-right-width: 0;
+        z-index: 0;
+    }
+    & span {
+        background-color: map-get($colors, z-white);
+        & i {
+            color: map-get($colors, z-gray);
+        }
+    }
+}
+
+#search-bar__button {
+    background-color: map-get($colors, z-orange);
+    color: map-get($colors, z-white);
+}

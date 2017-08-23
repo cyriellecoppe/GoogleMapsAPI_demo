@@ -1,0 +1,72 @@
+$colors: (
+    z-white: white,
+    z-ghostwhite: #f8f8ff,
+    z-yellow: #eeb120,
+    z-orange: #ee8a20,
+    z-darkred: darkred,
+    z-green: #8dac3c,
+    z-light-blue: #aad3dd,
+    z-medium-blue: #768cc9,
+    z-blue: #67babe,
+    z-dark-blue: #365096,
+    z-turquoise: #278387,
+    z-light-gray: rgba(0,0,0,0.15),
+    z-gray: gray,
+    z-dark-gray: #303e49,
+);
+
+
+$fonts: (
+    global: (Source Sans Pro, sans-serif),
+);
+
+* {
+    font-family: map-get($fonts, global);
+}
+
+a {
+    color: inherit;
+}
+
+.animation--loading {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: map-get($colors, z-light-gray);
+    border-radius: 50%;
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: map-get($colors, z-blue);
+    width: 60px;
+    height: 60px;
+    animation-name: animation--loading;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation--loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#index__animation--text {
+    text-align: center;
+    font-family: Helvetica;
+}
+
+.carousel__arrow:hover {
+    font-weight: bold;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: map-get($colors, z-gray);
+    opacity: 1;
+}

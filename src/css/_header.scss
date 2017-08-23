@@ -1,0 +1,31 @@
+#header__brand {
+    position: absolute;
+    top: 10px;
+    color: map-get($colors, z-orange);
+    & #header__brand--name {
+        font-family: 'Comfortaa', cursive;
+    }
+    & #header__brand--logo {
+        margin-right: 5px;
+    }
+}
+
+
+#header__svg {
+    max-height: 100px;
+    min-height: 90px;
+    min-width: 100%;
+    box-shadow: 0 0 10px map-get($colors, z-dark-gray);
+    & #header__svg__polygon {
+        fill: map-get($colors, z-dark-gray);
+        stroke-width: 0;
+    }
+    & #header__svg__line--orange {
+        stroke: map-get($colors, z-orange);
+        stroke-width: 2;
+    }
+    & #header__svg__line--blue {
+        stroke: map-get($colors, z-blue);
+        stroke-width: 15;
+    }
+}
